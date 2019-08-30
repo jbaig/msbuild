@@ -54,19 +54,19 @@ namespace Microsoft.Build.Construction
         SharedProject
     }
 
-    internal struct AspNetCompilerParameters
+    public struct AspNetCompilerParameters
     {
-        internal string aspNetVirtualPath;      // For Venus projects only, Virtual path for web
-        internal string aspNetPhysicalPath;     // For Venus projects only, Physical path for web
-        internal string aspNetTargetPath;       // For Venus projects only, Target for output files
-        internal string aspNetForce;            // For Venus projects only, Force overwrite of target
-        internal string aspNetUpdateable;       // For Venus projects only, compiled web application is updateable
-        internal string aspNetDebug;            // For Venus projects only, generate symbols, etc.
-        internal string aspNetKeyFile;          // For Venus projects only, strong name key file.
-        internal string aspNetKeyContainer;     // For Venus projects only, strong name key container.
-        internal string aspNetDelaySign;        // For Venus projects only, delay sign strong name.
-        internal string aspNetAPTCA;            // For Venus projects only, AllowPartiallyTrustedCallers.
-        internal string aspNetFixedNames;       // For Venus projects only, generate fixed assembly names.
+        public string aspNetVirtualPath;      // For Venus projects only, Virtual path for web
+        public string aspNetPhysicalPath;     // For Venus projects only, Physical path for web
+        public string aspNetTargetPath;       // For Venus projects only, Target for output files
+        public string aspNetForce;            // For Venus projects only, Force overwrite of target
+        public string aspNetUpdateable;       // For Venus projects only, compiled web application is updateable
+        public string aspNetDebug;            // For Venus projects only, generate symbols, etc.
+        public string aspNetKeyFile;          // For Venus projects only, strong name key file.
+        public string aspNetKeyContainer;     // For Venus projects only, strong name key container.
+        public string aspNetDelaySign;        // For Venus projects only, delay sign strong name.
+        public string aspNetAPTCA;            // For Venus projects only, AllowPartiallyTrustedCallers.
+        public string aspNetFixedNames;       // For Venus projects only, generate fixed assembly names.
     }
 
     /// <remarks>
@@ -209,7 +209,7 @@ namespace Microsoft.Build.Construction
         internal SolutionFile ParentSolution { get; set; }
 
         // Key is configuration name, value is [struct] AspNetCompilerParameters
-        internal Hashtable AspNetConfigurations { get; set; }
+        public Hashtable AspNetConfigurations { get; set; }
 
         internal string TargetFrameworkMoniker { get; set; }
 

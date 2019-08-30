@@ -2,6 +2,21 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 namespace Microsoft.Build.Construction
 {
+    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public partial struct AspNetCompilerParameters
+    {
+        public string aspNetAPTCA;
+        public string aspNetDebug;
+        public string aspNetDelaySign;
+        public string aspNetFixedNames;
+        public string aspNetForce;
+        public string aspNetKeyContainer;
+        public string aspNetKeyFile;
+        public string aspNetPhysicalPath;
+        public string aspNetTargetPath;
+        public string aspNetUpdateable;
+        public string aspNetVirtualPath;
+    }
     public abstract partial class ElementLocation
     {
         protected ElementLocation() { }
@@ -109,6 +124,7 @@ namespace Microsoft.Build.Construction
     {
         internal ProjectInSolution() { }
         public string AbsolutePath { get { throw null; } }
+        public System.Collections.Hashtable AspNetConfigurations { get { throw null; } set { } }
         public System.Collections.Generic.IReadOnlyList<string> Dependencies { get { throw null; } }
         public string ParentProjectGuid { get { throw null; } }
         public System.Collections.Generic.IReadOnlyDictionary<string, Microsoft.Build.Construction.ProjectConfigurationInSolution> ProjectConfigurations { get { throw null; } }
